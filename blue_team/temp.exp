@@ -1,0 +1,18 @@
+#!/usr/bin/expect
+
+#
+# 
+
+set PROMPT ">#%"
+
+spawn 
+send "ls\r"
+
+proc run {} {
+    expect -re $::PROMPT
+}
+
+proc login {} {
+    spawn ssh
+}
+
